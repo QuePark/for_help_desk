@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Image test</title>
+	</head>
+	<body>
+		<img
+			class="image"
+			src="./screenshot.png"
+			alt="image"
+			style="width: 1020px"
+		/>
+		<h2 style="margin: 20px 0 0 20px">위 사진에 마우스 우클릭을 해보세요</h2>
+		<script>
+			const init = () => {
+				const img = document.querySelector('.image');
+				img.addEventListener('contextmenu', (e) => {
+					e.preventDefault();
+					alert('복사가 금지된 태그입니다.');
+				});
+			};
+			init();
+		</script>
+	</body>
+</html>
